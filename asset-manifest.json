@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/build/main.293bce2b.js",
+    "main.js": "/build/main.b8b9c71e.js",
     "runtime-main.js": "/build/bundle.d27f85f7.js",
     "static/css/2.0d19495f.chunk.css": "/static/css/2.0d19495f.chunk.css",
-    "build/2.858bad08.js": "/build/2.858bad08.js",
-    "build/2.858bad08.js.LICENSE.txt": "/build/2.858bad08.js.LICENSE.txt",
+    "build/2.e863cf20.js": "/build/2.e863cf20.js",
+    "build/2.e863cf20.js.LICENSE.txt": "/build/2.e863cf20.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/2.0d19495f.chunk.css.map": "/static/css/2.0d19495f.chunk.css.map",
     "static/media/all.min.css": "/static/media/Spectral-Regular.7d0f535c.woff"
@@ -12,7 +12,7 @@
   "entrypoints": [
     "build/bundle.d27f85f7.js",
     "static/css/2.0d19495f.chunk.css",
-    "build/2.858bad08.js",
-    "build/main.293bce2b.js"
+    "build/2.e863cf20.js",
+    "build/main.b8b9c71e.js"
   ]
 }
