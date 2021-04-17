@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/reset.css"],"names":[],"mappings":"AAAA,aACG,YACH,CACA,kBACI,gBACJ,CACA,EACI,eACJ","file":"main.05b4219c.chunk.css","sourcesContent":["ul > li:before {\n   display: none;\n}\nol, ol>li, ul, ul>li{\n    padding-bottom: 0;\n}\na {\n    box-shadow: none\n}"]}
