@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.26855b84.chunk.css",
-    "main.js": "/build/main.0dd07be2.js",
+    "main.css": "/static/css/main.56851c43.chunk.css",
+    "main.js": "/build/main.7bfda73a.js",
     "runtime-main.js": "/build/bundle.3527ec54.js",
-    "build/2.0e871b72.js": "/build/2.0e871b72.js",
-    "build/2.0e871b72.js.LICENSE.txt": "/build/2.0e871b72.js.LICENSE.txt",
+    "build/2.a508c3ac.js": "/build/2.a508c3ac.js",
+    "build/2.a508c3ac.js.LICENSE.txt": "/build/2.a508c3ac.js.LICENSE.txt",
     "index.html": "/index.html",
-    "static/css/main.26855b84.chunk.css.map": "/static/css/main.26855b84.chunk.css.map",
+    "static/css/main.56851c43.chunk.css.map": "/static/css/main.56851c43.chunk.css.map",
     "static/media/style.css": "/static/media/Spectral-Regular.7d0f535c.woff"
   },
   "entrypoints": [
     "build/bundle.3527ec54.js",
-    "build/2.0e871b72.js",
-    "static/css/main.26855b84.chunk.css",
-    "build/main.0dd07be2.js"
+    "build/2.a508c3ac.js",
+    "static/css/main.56851c43.chunk.css",
+    "build/main.7bfda73a.js"
   ]
 }
