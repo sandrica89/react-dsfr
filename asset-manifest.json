@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.e98ea159.chunk.css",
-    "main.js": "/build/main.9fe587f4.js",
+    "main.css": "/static/css/main.2fe1ea27.chunk.css",
+    "main.js": "/build/main.d8e6d22c.js",
     "runtime-main.js": "/build/bundle.3527ec54.js",
     "static/css/2.b1de508f.chunk.css": "/static/css/2.b1de508f.chunk.css",
-    "build/2.f2f0d2c3.js": "/build/2.f2f0d2c3.js",
-    "build/2.f2f0d2c3.js.LICENSE.txt": "/build/2.f2f0d2c3.js.LICENSE.txt",
+    "build/2.72b90eca.js": "/build/2.72b90eca.js",
+    "build/2.72b90eca.js.LICENSE.txt": "/build/2.72b90eca.js.LICENSE.txt",
     "index.html": "/index.html",
     "static/css/2.b1de508f.chunk.css.map": "/static/css/2.b1de508f.chunk.css.map",
-    "static/css/main.e98ea159.chunk.css.map": "/static/css/main.e98ea159.chunk.css.map",
+    "static/css/main.2fe1ea27.chunk.css.map": "/static/css/main.2fe1ea27.chunk.css.map",
     "static/media/core.min.css": "/static/media/Spectral-Regular.7d0f535c.woff",
     "static/media/remixicon.css": "/static/media/remixicon.f2616f59.ttf"
   },
   "entrypoints": [
     "build/bundle.3527ec54.js",
     "static/css/2.b1de508f.chunk.css",
-    "build/2.f2f0d2c3.js",
-    "static/css/main.e98ea159.chunk.css",
-    "build/main.9fe587f4.js"
+    "build/2.72b90eca.js",
+    "static/css/main.2fe1ea27.chunk.css",
+    "build/main.d8e6d22c.js"
   ]
 }
