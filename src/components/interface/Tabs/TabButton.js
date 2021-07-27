@@ -1,36 +1,48 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import dataAttributes from '../../../utils/data-attributes';
 import '../../foundation/icon/icons.css';
 
-const TabButton = ({
-  className, index, activeTab, icon, label, setActiveTab, ...remainingProps
-}) => (
-  <li
-    role="presentation"
-    {...dataAttributes(remainingProps)}
-  >
-    <button
-      type="button"
-      role="tab"
-      id={`fr-tab-${index}`}
-      aria-selected={activeTab === index ? 'true' : 'false'}
-      tabIndex={activeTab === index ? 0 : -1}
-      aria-controls={`fr-tabpanel-${index}`}
-      className={classNames('fr-tabs__tab', {
-        'fr-tabs__tab--icon-left': icon,
-      })}
-      onClick={() => setActiveTab(index)}
-      onKeyDown={() => setActiveTab(index)}
+const TabButton = forwardRef((props, ref) => {
+  const {
+    className,
+    index,
+    activeTab,
+    icon,
+    label,
+    onClickTab,
+    onKeyDownTab,
+    ...remainingProps
+  } = props;
+
+  return (
+    <li
+      role="presentation"
+      {...dataAttributes(remainingProps)}
     >
-      {icon && (
-      <i className={classNames({ [icon]: icon })} />
-      )}
-      {label}
-    </button>
-  </li>
-);
+      <button
+        ref={ref}
+        type="button"
+        role="tab"
+        id={`fr-tab-${index}`}
+        aria-selected={activeTab === index ? 'true' : 'false'}
+        tabIndex={activeTab === index ? 0 : -1}
+        aria-controls={`fr-tabpanel-${index}`}
+        className={classNames('fr-tabs__tab', {
+          'fr-tabs__tab--icon-left': icon,
+        })}
+        onClick={() => onClickTab(index)}
+        onKeyDown={(e) => onKeyDownTab(e, index)}
+      >
+        {icon && (
+        <i className={classNames({ [icon]: icon })} />
+        )}
+        {label}
+      </button>
+    </li>
+  );
+});
 
 TabButton.defaultProps = {
   className: '',
@@ -43,7 +55,8 @@ TabButton.propTypes = {
     PropTypes.object,
     PropTypes.array,
   ]),
-  setActiveTab: PropTypes.func.isRequired,
+  onClickTab: PropTypes.func.isRequired,
+  onKeyDownTab: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
   icon: PropTypes.string,
   index: PropTypes.number.isRequired,

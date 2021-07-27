@@ -1,5 +1,5 @@
 import React, {
-  cloneElement, useState, Children,
+  cloneElement, useState, useMemo, Children,
 } from 'react';
 
 import classNames from 'classnames';
@@ -28,6 +28,45 @@ const Tabs = ({
     key: uuidv4(),
   }));
 
+  const buttonRefs = useMemo(() => tabsPanel.map(() => React.createRef()), [tabsPanel]);
+  const focusTab = (index) => {
+    buttonRefs[index].current?.focus();
+  };
+  const onKeyDownTab = (e, index) => {
+    // Behavior from WAI-ARIA Authoring Practices 1.1
+    // https://www.w3.org/TR/wai-aria-practices/#keyboard-interaction-19
+    switch (e.key) {
+      case 'Enter':
+      case 'Space':
+        e.preventDefault();
+        setActiveTab(index);
+        break;
+
+      case 'ArrowRight':
+        e.preventDefault();
+        focusTab((index + 1) % tabsPanel.length);
+        break;
+
+      case 'ArrowLeft':
+        e.preventDefault();
+        focusTab(index - 1 < 0 ? tabsPanel.length - 1 : index - 1);
+        break;
+
+      case 'Home':
+        e.preventDefault();
+        focusTab(0);
+        break;
+
+      case 'End':
+        e.preventDefault();
+        focusTab(tabsPanel.length - 1);
+        break;
+
+      default:
+        // do nothing => apply normal behavior
+    }
+  };
+
   const _className = classNames('fr-tabs', className, { [`fr-scheme-${scheme}`]: scheme });
   return (
     <div
@@ -40,9 +79,11 @@ const Tabs = ({
       >
         {tabsPanel.map((element, index) => (
           <TabButton
+            ref={buttonRefs[index]}
             key={uuidv4()}
             activeTab={activeTab}
-            setActiveTab={setActiveTab}
+            onClickTab={setActiveTab}
+            onKeyDownTab={onKeyDownTab}
             index={index}
             label={element.props.label}
             icon={element.props.icon}
