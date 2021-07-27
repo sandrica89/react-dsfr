@@ -16,7 +16,7 @@ const TabButton = ({
       role="tab"
       id={`fr-tab-${index}`}
       aria-selected={activeTab === index ? 'true' : 'false'}
-      tabIndex="0"
+      tabIndex={activeTab === index ? 0 : -1}
       aria-controls={`fr-tabpanel-${index}`}
       className={classNames('fr-tabs__tab', {
         'fr-tabs__tab--icon-left': icon,
