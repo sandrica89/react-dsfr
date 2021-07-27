@@ -14,6 +14,7 @@ const TabButton = ({
     <button
       type="button"
       role="tab"
+      id={`fr-tab-${index}`}
       aria-selected={activeTab === index ? 'true' : 'false'}
       tabIndex="0"
       aria-controls={`fr-tabpanel-${index}`}
